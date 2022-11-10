@@ -1,0 +1,384 @@
+$color_1: black;
+$color_2: white;
+$color_3: #212121;
+$color_4: gray;
+$color_5: wheat;
+$color_6: rgb(253, 252, 252);
+$color_7: #fff;
+$color_8: #333;
+$font-family_1: helvetica;
+$font-family_2: JabinTitulos;
+$font-family_3: monospace;
+$background-color_1: rgb(184, 183, 183);
+$background-color_2: gray;
+@font-face {
+	font-family: JabinTitulos;
+	src:url(../JabinTitulos.ttf);
+}
+
+* {
+	box-sizing: border-box;
+	font-family: $font-family_1;
+}
+h1 {
+	font-family: $font-family_2;
+}
+h2 {
+	font-family: $font-family_2;
+}
+body {
+	margin: 0;
+}
+.main {
+	padding: 20px;
+}
+img {
+	display: block;
+	width: 100%;
+}
+.main-header {
+	padding: 0px 20px;
+}
+.main-header__title {
+	text-align: center;
+	font-size: 2.5em;
+	margin: 10px;
+	color: $color_1;
+}
+.menu {
+	position: absolute;
+	top: 190px;
+	left: 0;
+	background: #212121;
+	width: 100%;
+	list-style: none;
+	padding: 0px;
+	margin: 0%;
+	z-index: 999999;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s;
+}
+.menu__item {
+	padding: 20px;
+	text-align: center;
+	width: 150px;
+	margin: auto;
+}
+.menu__link {
+	padding: 0px;
+	color: $color_2;
+	text-decoration: none;
+	position: relative;
+	display: block;
+	font-family: $font-family_2;
+	font-size: x-large;
+	transition: all 1.3s ease;
+	border-radius: 20px;
+	&:hover {
+		background-color: $background-color_1;
+		color: $color_3;
+		background-image: linear-gradient(to right, rgb(135, 134, 134), rgb(253, 253, 253));
+		transform: scale(2,2);
+	}
+}
+.mostrar {
+	opacity: 1;
+	visibility: visible;
+}
+.main-header__container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.icon-menu {
+	font-size: 1.5em;
+	border: 1px solid black;
+	display: block;
+	padding: 10px 20px;
+	cursor: pointer;
+	margin-left: auto;
+}
+.main-header__btn {
+	border: 1px solid black;
+	display: block;
+	padding: 10px 30px;
+	color: $color_1;
+	text-decoration: none;
+}
+.main-header__input {
+	display: block;
+	padding: 10px;
+	width: 50%;
+}
+.container-slider {
+	margin: 50px 0;
+	position: relative;
+	overflow: hidden;
+}
+.slider {
+	display: flex;
+	width: 400%;
+	height: 500px;
+	margin-left: -100%;
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: rgba(0, 0, 0, 0.5);
+		height: 100%;
+		z-index: 1;
+	}
+}
+.slider__section {
+	width: 100%;
+	position: relative;
+}
+.slider__img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.slider__btn {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background: rgba(255, 255, 255, 0.7);
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 30px;
+	font-weight: bold;
+	font-family: $font-family_3;
+	text-align: center;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&:hover {
+		background: #fff;
+	}
+}
+.slider__btn--left {
+	left: 10px;
+}
+.slider__btn--right {
+	right: 10px;
+}
+.slider__content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: $color_2;
+	transform: translateX(-50%) translateY(-50%);
+	width: 60%;
+	text-align: center;
+	z-index: 999;
+}
+.slider__title {
+	font-size: 3em;
+	margin: 5px 0;
+}
+.slider__link {
+	display: block;
+	border: 1px solid rgb(255, 254, 254);
+	color: $color_2;
+	text-align: center;
+	text-decoration: none;
+	width: 150px;
+	font-size: 1em;
+	margin: 10px auto;
+	&:hover {
+		background: black;
+		color: $color_2;
+	}
+}
+.main-title {
+	text-align: center;
+}
+.container-products {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 10px;
+}
+.products {
+	border: 10px solid black;
+	padding: 50px;
+	text-align: center;
+	margin: 20px;
+	align-content: center;
+}
+.product__title {
+	text-align: center;
+	font-family: $font-family_2;
+}
+.product__price {
+	color: $color_1;
+	font-weight: bold;
+}
+.product__icon {
+	display: block;
+	margin-top: 10px;
+	&:hover {
+		color: $color_4;
+	}
+}
+.main__footer {
+	background: black;
+	color: $color_2;
+	padding: 30px 20px;
+	padding-top: 10px;
+}
+.footer__txt {
+	color: $color_4;
+}
+.footer__link {
+	color: $color_4;
+	text-decoration: none;
+	display: block;
+	padding: 10px 0;
+}
+.footer__input {
+	background: rgb(248, 246, 246);
+	width: 100%;
+	display: block;
+	padding: 20px;
+	border: 1px rgb(175, 74, 74);
+}
+.copy {
+	color: $color_5;
+}
+.footer__title {
+	border-bottom: 1px solid white;
+	padding-bottom: 20px;
+}
+.contact-wrapper {
+	box-shadow: 0 0 20px 0 white;
+	>* {
+		padding: 1em;
+	}
+}
+.main-contact {
+	background-color: $background-color_2;
+	max-width: 1170px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1.5em;
+	color: $color_6;
+	margin-bottom: 30px;
+}
+.contact-form {
+	background: rgb(6, 6, 6);
+	form {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		.block {
+			grid-column: 1 / 3;
+		}
+		p {
+			margin: 0;
+			padding: 1em;
+		}
+		button {
+			width: 100%;
+			padding: .7em;
+			border: none;
+			background: none;
+			color: $color_7;
+			outline: 0;
+			border-bottom: 1px solid rgb(251, 249, 249);
+			background: #333;
+			border: 0;
+			text-transform: uppercase;
+			padding: 1em;
+			&:hover {
+				background: #212121;
+				color: $color_1;
+				transition: background-color 1s ease-out;
+				outline: 0;
+			}
+			&:focus {
+				background: #212121;
+				color: $color_1;
+				transition: background-color 1s ease-out;
+				outline: 0;
+			}
+		}
+		input {
+			width: 100%;
+			padding: .7em;
+			border: none;
+			background: none;
+			color: $color_7;
+			outline: 0;
+			border-bottom: 1px solid rgb(251, 249, 249);
+		}
+		textarea {
+			width: 100%;
+			padding: .7em;
+			border: none;
+			background: none;
+			color: $color_7;
+			outline: 0;
+			border-bottom: 1px solid rgb(251, 249, 249);
+		}
+	}
+}
+.contact-info {
+	background: rgb(33, 33, 33);
+	h2 {
+		.contact-info {
+			ul {
+				.contact-info {
+					p {
+						text-align: center;
+						margin: 0 0 1rem 0;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width:768px) {
+	.slider {
+		height: 400px;
+	}
+}
+@media screen and (min-width:1024px) {
+	.icon-menu {
+		display: none;
+	}
+	.menu {
+		visibility: visible;
+		opacity: 1;
+		position: static;
+		width: 100;
+		display: flex;
+		background: none;
+	}
+	.main-header {
+		.container-_flex {
+			display: flex;
+		}
+	}
+	.main-header__container {
+		flex-wrap: wrap;
+		align-content: flex-start;
+		padding-top: 20px;
+		&:nth-child(2) {
+			order: -1;
+		}
+	}
+	.menu__link {
+		color: $color_8;
+	}
+	.main__footer {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
